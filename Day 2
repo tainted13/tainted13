@@ -1,0 +1,21 @@
+// arrayUtility.js
+function findMax(numbers) {
+  if (!Array.isArray(numbers) || numbers.length === 0) {
+    throw new Error('Input must be a non-empty array.');
+  }
+
+  let max = numbers[0];
+
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+
+  return max;
+}
+
+// main.js
+const numbersArray = [1, 10, 5, 7, 20, 3];
+const maxNumber = findMax(numbersArray);
+console.log(maxNumber);
